@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bharathapuzha River | Nila</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f8ff;
+            color: #243447;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #063b5c;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: #80d8ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #80d8ff;
+        }
+
+        .hero {
+            min-height: 550px;
+            background:
+                linear-gradient(rgba(0, 30, 50, 0.55),
+                rgba(0, 30, 50, 0.65)),
+                url("https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 750px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00a6c7;
+            color: white;
+            padding: 13px 25px;
+            margin-top: 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #007c91;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 65px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #064b70;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            text-align: justify;
+            font-size: 17px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .stat-card h3 {
+            font-size: 30px;
+            color: #0097bd;
+        }
+
+        .features {
+            background: #e2f4fa;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #007c91;
+            margin-bottom: 12px;
+        }
+
+        .course {
+            background: white;
+        }
+
+        .course-box {
+            max-width: 900px;
+            margin: auto;
+            background: #e9f8fc;
+            padding: 30px;
+            border-left: 6px solid #0097bd;
+            border-radius: 8px;
+        }
+
+        .importance {
+            background: #f0f8ff;
+        }
+
+        .map-section {
+            background: #063b5c;
+            color: white;
+            text-align: center;
+        }
+
+        .map-section h2 {
+            color: #80d8ff;
+        }
+
+        .map-section p {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .map-btn {
+            background: #00b4d8;
+            color: white;
+        }
+
+        .conservation {
+            background: #e2f4fa;
+        }
+
+        .conservation ul {
+            max-width: 850px;
+            margin: auto;
+            padding-left: 25px;
+        }
+
+        footer {
+            background: #021f35;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer a {
+            color: #80d8ff;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 12px;
+            }
+
+            nav a {
+                display: inline-block;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>NILA | BHARATHAPUZHA</h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#course">River Course</a>
+        <a href="#importance">Importance</a>
+        <a href="#map">WebGIS</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+
+<div class="hero" id="home">
+    <h1>Bharathapuzha</h1>
+
+    <p>
+        The Lifeline of Malabar | The Cultural River of Kerala
+    </p>
+
+    <p>
+        Discover the geographical, ecological and cultural
+        features of the majestic Nila River.
+    </p>
+
+    <a href="#about" class="btn">
+        Discover the River
+    </a>
+</div>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">About Bharathapuzha</h2>
+
+    <div class="about">
+
+        <p>
+            Bharathapuzha, popularly known as Nila or Perar,
+            is one of the major rivers of Kerala. It is the
+            second-longest river in Kerala and plays an important
+            role in the physical landscape, agriculture,
+            settlements and cultural life of the Malabar region.
+        </p>
+
+        <br>
+
+        <p>
+            The river originates in the Anamalai Hills of the
+            Western Ghats in Tamil Nadu. It flows through the
+            Palakkad Gap and traverses the districts of Palakkad,
+            Thrissur and Malappuram in Kerala before draining
+            into the Arabian Sea near Ponnani.
+        </p>
+
+        <br>
+
+        <p>
+            Bharathapuzha is an important west-flowing river
+            system. Its basin supports agricultural activities,
+            settlements, irrigation systems and diverse
+            ecological environments.
+        </p>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3>209 km</h3>
+            <p>Approximate Main River Length</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>6,186 km²</h3>
+            <p>Total Basin Area</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Western Ghats</h3>
+            <p>Source Region</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Arabian Sea</h3>
+            <p>River Mouth at Ponnani</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- GEOGRAPHICAL FEATURES -->
+
+<section class="features" id="features">
+
+    <h2 class="section-title">
+        Geographical Features
+    </h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <h3>01. Origin and Source</h3>
+
+            <p>
+                The river system originates in the Anamalai Hills
+                of the Western Ghats. The mountainous source region
+                contributes rainfall runoff and streams to the
+                upper drainage basin.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>02. Drainage Basin</h3>
+
+            <p>
+                The Bharathapuzha basin extends across Tamil Nadu
+                and Kerala. It includes highlands, valleys,
+                agricultural plains and coastal environments.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>03. River Tributaries</h3>
+
+            <p>
+                Important tributaries include Kannadipuzha,
+                Kalpathipuzha, Gayathripuzha and Thuthapuzha.
+                These tributaries contribute water to the
+                main river channel.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>04. River Course</h3>
+
+            <p>
+                The river flows westward through the Palakkad Gap.
+                Its course includes mountainous terrain,
+                middle reaches, floodplains and a coastal
+                outlet near Ponnani.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>05. Seasonal Flow</h3>
+
+            <p>
+                River discharge is strongly influenced by the
+                southwest and northeast monsoons. Water levels
+                generally decrease during the dry summer season.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>06. Landforms</h3>
+
+            <p>
+                The river basin contains valleys, river terraces,
+                floodplains, alluvial deposits, channel bars
+                and sandbanks formed by fluvial processes.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RIVER COURSE -->
+
+<section class="course" id="course">
+
+    <h2 class="section-title">
+        River Course and Drainage
+    </h2>
+
+    <div class="course-box">
+
+        <h3>Upper Course</h3>
+
+        <p>
+            The upper drainage system begins in the Anamalai
+            Hills of the Western Ghats. Steep slopes and
+            mountainous terrain influence runoff and stream flow.
+        </p>
+
+        <br>
+
+        <h3>Middle Course</h3>
+
+        <p>
+            The river enters Kerala through the Palakkad Gap.
+            It receives water from major tributaries and flows
+            through Palakkad and parts of Thrissur.
+            River valleys, agricultural landscapes and
+            settlements are prominent in this region.
+        </p>
+
+        <br>
+
+        <h3>Lower Course</h3>
+
+        <p>
+            The river flows through Malappuram district.
+            The channel becomes associated with wider
+            floodplain environments and finally reaches
+            the Arabian Sea near Ponnani.
+        </p>
+
+        <br>
+
+        <h3>Major Tributaries</h3>
+
+        <ul>
+            <li>Kannadipuzha (Chitturpuzha)</li>
+            <li>Kalpathipuzha</li>
+            <li>Gayathripuzha</li>
+            <li>Thuthapuzha (Thoothapuzha)</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- IMPORTANCE -->
+
+<section class="importance" id="importance">
+
+    <h2 class="section-title">
+        Importance of Bharathapuzha
+    </h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <h3>Agricultural Importance</h3>
+
+            <p>
+                The river basin supports paddy cultivation,
+                irrigation and agricultural activities
+                in the surrounding rural areas.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Ecological Importance</h3>
+
+            <p>
+                The river and its tributaries provide
+                habitats for aquatic organisms and
+                support riparian ecosystems.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Cultural Importance</h3>
+
+            <p>
+                Nila is deeply connected with the history,
+                literature, traditions and cultural identity
+                of Kerala.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Economic Importance</h3>
+
+            <p>
+                The river basin contributes to water supply,
+                irrigation, agriculture and the livelihoods
+                of local communities.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CULTURAL HERITAGE -->
+
+<section class="features">
+
+    <h2 class="section-title">
+        Cultural Heritage of Nila
+    </h2>
+
+    <div class="about">
+
+        <p>
+            Bharathapuzha is widely regarded as a cultural
+            river of Kerala. Its banks have influenced
+            Malayalam literature, traditional art forms
+            and religious practices.
+        </p>
+
+        <br>
+
+        <p>
+            Thirunavaya, an important historical and
+            cultural centre, is located along the river.
+            The Mamankam festival was historically
+            associated with this region.
+        </p>
+
+        <br>
+
+        <p>
+            Kerala Kalamandalam, a renowned institution
+            for traditional performing arts, is situated
+            at Cheruthuruthy near Bharathapuzha.
+            The river has inspired many Malayalam
+            writers, poets and artists.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ENVIRONMENTAL CONSERVATION -->
+
+<section class="conservation">
+
+    <h2 class="section-title">
+        Environmental Challenges and Conservation
+    </h2>
+
+    <div class="about">
+
+        <p>
+            Bharathapuzha faces several environmental
+            challenges that affect its water resources
+            and river ecosystem.
+        </p>
+
+        <br>
+
+        <ul>
+
+            <li>
+                Excessive sand mining and alteration
+                of the river channel.
+            </li>
+
+            <li>
+                Water scarcity during the summer season.
+            </li>
+
+            <li>
+                Pollution from domestic waste
+                and other human activities.
+            </li>
+
+            <li>
+                Changes in river flow due to dams
+                and water abstraction.
+            </li>
+
+            <li>
+                Degradation of riparian vegetation
+                and aquatic habitats.
+            </li>
+
+        </ul>
+
+        <br>
+
+        <p>
+            Sustainable river management, restoration
+            of riparian vegetation, control of pollution,
+            scientific sand mining regulation and
+            community participation are important
+            for the conservation of Bharathapuzha.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- WEBGIS -->
+
+<section class="map-section" id="map">
+
+    <h2 class="section-title">
+        Bharathapuzha WebGIS Resource Map
+    </h2>
+
+    <p>
+        Explore the spatial distribution of river
+        features, drainage networks and geographical
+        resources through the interactive WebGIS
+        mapping platform.
+    </p>
+
+    <a
+        href="https://lakshminathrs1-maker.github.io/BHARATHAPUZHA/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn map-btn">
+
+        Open Interactive WebGIS Map
+
+    </a>
+
+    <br><br>
+
+    <p>
+        The WebGIS platform provides a spatial
+        perspective of the Bharathapuzha river
+        system and its geographical characteristics.
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Bharathapuzha | Nila</h3>
+
+    <p>
+        Understanding the River through Geography,
+        GIS and Environmental Conservation.
+    </p>
+
+    <p>
+        WebGIS:
+        <a
+            href="https://lakshminathrs1-maker.github.io/BHARATHAPUZHA/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Bharathapuzha Interactive Map
+
+        </a>
+    </p>
+
+    <p>
+        © 2026 Bharathapuzha Geographic Information Project
+    </p>
+
+</footer>
+
+</body>
+</html>
